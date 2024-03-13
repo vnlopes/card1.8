@@ -1,3 +1,5 @@
+let music = document.querySelector('audio')
+
 const anima = () => {
     document.querySelector('#card-top').classList.add('card-top')
     document.querySelector('#c1').classList.add('c1')
@@ -5,7 +7,9 @@ const anima = () => {
     document.querySelector('#c3').classList.add('c3')
     document.querySelector('#cartao').classList.add('cartao')
     document.querySelector('#light').classList.add('light')
+    music.innerHTML = '<audio src="music.mp3" autoplay loop></audio>'
 }
+
 
 const remove = () => {
     document.querySelector('#card-top').classList.remove('card-top')
@@ -14,8 +18,9 @@ const remove = () => {
     document.querySelector('#c3').classList.remove('c3')
     document.querySelector('#cartao').classList.remove('cartao')
     document.querySelector('#light').classList.remove('light')
+    let music = document.querySelector('audio')
+    music.innerHTML = ''
 }
 
-const audio = document.querySelector('audio')
 
-audio.volume = 0.2;
+
