@@ -1,0 +1,389 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    rgba(41, 126, 153, 1) 0%,
+    rgba(68, 210, 255, 1) 100%
+  );
+  flex-direction: column;
+  position: relative;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  justify-content: center;
+}
+
+.card {
+  filter: drop-shadow(rgba(0, 0, 0, 0.459) 0px 7px 5px);
+  user-select: none;
+  /* background-color: #68a3fd; */
+  position: relative;
+  height: 250px;
+}
+
+.btts {
+  display: flex;
+  gap: 20px;
+  height: 60px;
+  z-index: 2;
+}
+
+.init {
+  width: 140px;
+  height: 40px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.24);
+  box-shadow: rgba(0, 0, 0, 0.322) 0 5px 10px;
+  cursor: pointer;
+}
+
+.reboot {
+  width: 140px;
+  height: 40px;
+  border: 2px solid #ff1d1d;
+  border-radius: 10px;
+  color: rgb(255, 37, 37);
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: rgba(255, 158, 158, 0.24);
+  box-shadow: rgba(0, 0, 0, 0.322) 0 5px 10px;
+  cursor: pointer;
+}
+
+.bg-card {
+  width: 464px;
+  height: 200px;
+  background-color: #3988ff;
+  position: absolute;
+  top: 0px;
+  z-index: -3;
+}
+
+@keyframes light {
+  from {
+    position: absolute;
+    top: 120px;
+    left: calc(50% - 20px);
+    width: 60px;
+    height: 40px;
+    border-radius: 20%;
+    /* box-shadow:
+    0 0 60px 60px #ffffff,
+    0 0 100px 60px #3988FF; */
+    z-index: -1;
+  }
+  to {
+    position: absolute;
+    top: 120px;
+    left: calc(50% - 20px);
+    width: 100px;
+    height: 40px;
+    box-shadow: 0 0 60px 60px #ffffff, 0 0 100px 60px #3988ff;
+    z-index: -1;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  30% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+.hearts {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 464px;
+  z-index: -1;
+}
+
+.c1 {
+  position: absolute;
+  width: 400px;
+  animation: pralaca 1.7s infinite alternate-reverse,
+    heart 8s ease-in-out forwards;
+}
+
+#c1 {
+  position: absolute;
+  width: 400px;
+}
+
+.c2 {
+  width: 200px;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  animation: pralaca 2s infinite alternate-reverse,
+    heart 12s ease-in-out forwards;
+}
+
+#c2 {
+  width: 200px;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+}
+
+.c3 {
+  left: 100px;
+  position: absolute;
+  width: 100px;
+  top: 100px;
+  animation: pralaca 1.3s infinite alternate-reverse,
+    heart 9s ease-in-out forwards;
+}
+
+#c3 {
+  left: 100px;
+  position: absolute;
+  width: 100px;
+  top: 100px;
+}
+
+@keyframes heart {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    visibility: hidden;
+    transform: translateY(-500px);
+  }
+}
+
+@keyframes pralaca {
+  0% {
+    left: 90px;
+  }
+  100% {
+    left: 60px;
+  }
+}
+
+.light {
+  position: absolute;
+  top: 120px;
+  left: calc(50% - 20px);
+  width: 80px;
+  height: 40px;
+  /* box-shadow:
+    0 0 60px 60px #ffffff,
+    0 0 100px 60px #3988FF; */
+  z-index: -1;
+  animation: move 1s infinite alternate ease-in-out, light 4s forwards;
+}
+
+#light {
+  position: absolute;
+  top: 120px;
+  left: calc(50% - 20px);
+  width: 80px;
+  height: 40px;
+  /* box-shadow:
+    0 0 60px 60px #ffffff,
+    0 0 100px 60px #3988FF; */
+  z-index: -1;
+}
+
+.card-top {
+  top: -249px;
+  position: absolute;
+  clip-path: polygon(50% 90%, 0 50%, 100% 50%);
+  background-color: #3988ff;
+  width: 464px;
+  height: 500px;
+  animation: open 0.7s forwards;
+}
+
+#card-top {
+  top: -249px;
+  position: absolute;
+  clip-path: polygon(50% 80%, 0 50%, 100% 50%);
+  background-color: #3988ff;
+  width: 464px;
+  height: 500px;
+}
+
+.cartao {
+  position: absolute;
+  width: 464px;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  top: 1px;
+  animation: sobe 3s forwards;
+}
+
+#cartao {
+  position: absolute;
+  width: 464px;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  top: 1px;
+}
+
+@keyframes sobe {
+  0% {
+    top: 1px;
+  }
+  30% {
+    top: 1px;
+  }
+  100% {
+    top: -130px;
+  }
+}
+
+.cartao img {
+  width: 450px;
+}
+
+@keyframes open {
+  0% {
+    clip-path: polygon(50% 80%, 0 50%, 100% 50%);
+  }
+  100% {
+    z-index: -2;
+    clip-path: polygon(50% 20%, 0 50%, 100% 50%);
+  }
+}
+
+
+@media (max-width: 600px){
+  #card, .bg-card, .aaa, .cartao img{
+    width: 250px;
+  }
+
+  .bg-card{
+    height: 100px;
+    width: 230px;
+  }
+
+  #c3{
+    width: 200px;
+    top: -10px;
+  }
+
+  #c1{
+    width: 50px;
+  }
+
+  #c2{
+    top: -2px;
+    width: 100px;
+  }
+
+  #card-top{
+    width: 244px;
+    clip-path: polygon(50% 65%, 0 50%, 100% 50%);
+  }
+
+  #cartao img{
+    width: 200px;
+  }
+
+  .card{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #light{
+    width: 30px;
+  }
+
+  @keyframes sobe {
+    0% {
+      top: 1px;
+    }
+    30% {
+      top: 1px;
+    }
+    100% {
+      top: -45px;
+    }
+  }
+
+  @keyframes open {
+    0% {
+    }
+    100% {
+      z-index: -2;
+      clip-path: polygon(50% 35%, 0 50%, 100% 50%);
+    }
+  }
+
+  @keyframes light {
+    from {
+      top: 100px;
+    }
+    to {
+      position: absolute;
+      top: 60px;
+      left: calc(50% - 20px);
+      width: 10px;
+      height: 0px;
+      box-shadow: 0 0 60px 60px #ffffff, 0 0 100px 30px #3988ff;
+      z-index: -1;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(0px);
+    }
+    30% {
+      transform: translateX(-10px);
+    }
+    100% {
+      transform: translateX(5px);
+    }
+  }
+
+  @keyframes heart {
+    0% {
+      transform: translateY(10px);
+    }
+    100% {
+      visibility: hidden;
+      transform: translateY(-600px);
+    }
+  }
+  
+  @keyframes pralaca {
+    0% {
+      left: 160px;
+    }
+    100% {
+      left: 140px;
+    }
+  }
+
+}
