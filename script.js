@@ -15,3 +15,7 @@ const remove = () => {
     document.querySelector('#cartao').classList.remove('cartao')
     document.querySelector('#light').classList.remove('light')
 }
+
+const audio = document.querySelector('audio')
+
+audio.volume = 0.2;
