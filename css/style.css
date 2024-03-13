@@ -16,6 +16,7 @@ body {
   background-repeat: no-repeat;
   min-height: 100vh;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 main{
@@ -318,7 +319,6 @@ main{
 
   #light{
     width: 30px;
-    animation: move 2s infinite alternate ease-in-out, light 4s forwards;
   }
 
   @keyframes sobe {
@@ -353,7 +353,7 @@ main{
       height: 0px;
       left: 120px;
       border-radius: 50%;
-      box-shadow: 0 0 60px 40px #ffffff, 0 15px 40px 40px #3988ff;
+      box-shadow: 0 0 60px 40px #ffffff, 0 10px 40px 40px #569aff;
       z-index: -1;
     }
   }
