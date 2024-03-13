@@ -13,11 +13,9 @@ body {
     rgba(68, 210, 255, 1) 100%
   );
   flex-direction: column;
-  position: relative;
   background-repeat: no-repeat;
   min-height: 100vh;
   overflow-x: hidden;
-  min-width: 100W;
 }
 
 main{
@@ -288,11 +286,6 @@ main{
     width: 241px;
   }
 
-  body{
-    min-width: 100vw;
-    overflow-x: hidden;
-  }
-  
   #c3{
     width: 200px;
     top: -10px;
